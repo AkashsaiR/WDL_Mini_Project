@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> 
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar has-shadow is-rgba()">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="../index.html">
+          <img src="../source/Keyboard_icon.svg" style="max-height: 55px" class="py-2 px-2">
+          <h1 class="title">Typing Test</h1>
+        </a>
+      </div>
+      <div class="navbar-menu" id="nav_links">
+        <div class="navbar-end">
+          <a class="navbar-item" href="../index.html">Home</a>
+          <a class="navbar-item" href="Test.html">Test</a>
+          <a class="navbar-item">Leaderboard</a>
+          <a class="navbar-item">Account</a>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="columns">
+        <div class="column card  mx-2" sty >
+          <h1 class="title has-text-centered">WPM</h1>
+          <h2 class="subtitle has-text-centered is-2 has-text-weight-bold" id="wpm">100</h2>
+        </div>
+        <div class="column card is-primary mx-2">
+          <h1 class="title has-text-centered">CPM</h1>
+          <h2 class="subtitle has-text-centered is-2 has-text-weight-bold" id="cpm">100</h2>
+        </div>
+        <div class="column card is-primary mx-2">
+          <div class="title has-text-centered">Errors</div>
+          <div class="subtitle has-text-centered is-2 has-text-weight-bold" id="errors">0</div>
+        </div>
+        <div class="column card is-primary mx-2">
+          <div class="title has-text-centered">Time</div>
+          <div class="subtitle has-text-centered is-2 has-text-weight-bold" id="time">60s</div>
+        </div>
+        <div class="column card is-primary mx-2">
+          <div class="title has-text-centered">Accuracy</div>
+          <div class="subtitle has-text-centered is-2 has-text-weight-bold" id="accuracy">100%</div>
+        </div>
+      </div>
+      <div class="notification is-primary">
+        <div class="title">Enter the text</div>
+        <p class="subtitle" id="display_text">text</p>
+      </div>
+        <textarea class="textarea has-fixed-size is-primary" id="typing_area" placeholder="start typing here..." oninput="processCurrentText()"
+          onfocus="startGame()"></textarea>
+        <!-- <button class="restart_btn" onclick="resetValues()">Restart</button> -->
+      
+    </div>
+    <script src="typing.js"></script>
+  </body>
+</html> 
